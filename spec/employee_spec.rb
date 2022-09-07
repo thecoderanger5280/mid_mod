@@ -2,7 +2,7 @@ require 'rspec'
 require './lib/employee'
 
 RSpec.describe Employee do
-  describe '#Initialize' do
+  describe '#initialize' do
     it 'exists' do
       bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})
 
