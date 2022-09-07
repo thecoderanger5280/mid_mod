@@ -35,4 +35,21 @@ RSpec.describe Department do
       expect(customer_service.employees).to eq([bobbi, aaron])
     end
   end
+
+  describe '#expense' do
+    it 'has a tally of expenses' do
+      customer_service = Department.new("Customer Service")
+      
+      expect(customer_service.expenses).to eq(0)
+    end
+
+    it 'can add expenses' do
+      customer_service = Department.new("Customer Service")
+      
+      customer_service.expense(100)
+      customer_service.expense(25)
+
+      expect(customer_service.expenses).to eq(125)
+    end
+  end
 end
